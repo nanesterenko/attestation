@@ -134,6 +134,7 @@ def calculate(available_resources: list) -> list:
                 portions_supplement = int(other_resource.get("limit") // other_resource.get("portion"))
             except TypeError:
                 print("Не удалось вычислить сколько раз можем использовать добавки")
+                break
 
             # Вычисляем сколько бутылок с полным комплектом
             bottles_with_full_set = min((max_buttle, portions_supplement))
